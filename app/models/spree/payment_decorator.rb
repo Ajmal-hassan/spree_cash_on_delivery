@@ -1,4 +1,4 @@
-Spree::Payment.class_eval do
+module Spree::PaymentDecorator
 
 
   def build_source
@@ -18,3 +18,4 @@ Spree::Payment.class_eval do
   end
 
 end
+::Spree::Payment.prepend(Spree::PaymentDecorator)
